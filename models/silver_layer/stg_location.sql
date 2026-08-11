@@ -1,0 +1,1 @@
+select * from hrdt_dev_db.hrdt_dev_raw_sc.location

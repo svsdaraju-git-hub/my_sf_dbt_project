@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: hrdt_raw
+    database: HRDT_DEV_DB
+    schema: HRDT_DEV_RAW_SC
+    description: "HRMS raw layer - daily CSV files from Workday via S3"
+    tables:
+      - name: employee_master
+        description: "Raw employee master data"
+      - name: learning_enrollments
+        description: "Raw learning course enrollments"
+      - name: learning_completions
+        description: "Raw learning course completions"
+      - name: business_unit
+        description: "Raw business unit dimension"
+      - name: location
+        description: "Raw office/work location dimension"
+      - name: position
+        description: "Raw position/role dimension"
+      - name: attendance
+        description: "Raw daily attendance records"
+      - name: manager_hierarchy
+        description: "Raw manager-employee reporting hierarchy"
+      - name: working_hours
+        description: "Raw weekly working hours"
+      - name: hiring_details
+        description: "Raw hiring/recruitment details"
+      - name: merger_history
+        description: "Raw business unit merger history"
+      - name: payroll
+        description: "Raw payroll transactions"
