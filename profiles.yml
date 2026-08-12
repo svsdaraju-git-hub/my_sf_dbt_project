@@ -1,0 +1,16 @@
+my_new_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: ""
+      user: ""
+      role: ACCOUNTADMIN
+      database: HRDT_DEV_DB
+      warehouse: MY_DEV_WH
+      schema: HRDT_DEV_SILVER_SC
+      threads: 4
+
+
+
+# hrms_silver:

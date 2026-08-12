@@ -1,1 +1,0 @@
-select * from {{ source('silver_src', 'location') }}

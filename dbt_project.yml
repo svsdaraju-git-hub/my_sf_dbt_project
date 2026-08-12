@@ -42,3 +42,8 @@ models:
       +materialized: table
     silver_layer:
       +materialized: table
+    staging:
+      +materialized: incremental
+    marts:
+      +materialized: table
+
