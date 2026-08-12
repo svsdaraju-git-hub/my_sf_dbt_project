@@ -1,0 +1,110 @@
+version: 2
+
+models:
+  - name: stg_employee_master
+    description: "Silver: cleaned, typed employee master"
+    columns:
+      - name: emp_id
+        tests: [unique, not_null]
+      - name: work_email
+        tests: [unique]
+      - name: status
+        tests: [not_null]
+      - name: hire_date
+        tests: [not_null]
+      - name: _loaded_at
+        tests: [not_null]
+      - name: _transformed_at
+        tests: [not_null]
+
+  - name: stg_learning_enrollments
+    description: "Silver: cleaned learning enrollments"
+    columns:
+      - name: enrollment_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+
+  - name: stg_learning_completions
+    description: "Silver: cleaned learning completions"
+    columns:
+      - name: completion_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+
+  - name: stg_business_unit
+    description: "Silver: cleaned business unit dimension"
+    columns:
+      - name: bu_id
+        tests: [unique, not_null]
+      - name: bu_name
+        tests: [not_null]
+
+  - name: stg_location
+    description: "Silver: cleaned location dimension"
+    columns:
+      - name: location_id
+        tests: [unique, not_null]
+      - name: location_name
+        tests: [not_null]
+
+  - name: stg_position
+    description: "Silver: cleaned position dimension"
+    columns:
+      - name: position_id
+        tests: [unique, not_null]
+      - name: position_name
+        tests: [not_null]
+
+  - name: stg_attendance
+    description: "Silver: cleaned daily attendance"
+    columns:
+      - name: attendance_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+      - name: work_date
+        tests: [not_null]
+
+  - name: stg_manager_hierarchy
+    description: "Silver: cleaned manager hierarchy"
+    columns:
+      - name: person_id
+        tests: [unique, not_null]
+
+  - name: stg_working_hours
+    description: "Silver: cleaned weekly working hours"
+    columns:
+      - name: working_hour_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+
+  - name: stg_hiring_details
+    description: "Silver: cleaned hiring/recruitment details"
+    columns:
+      - name: hiring_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+
+  - name: stg_merger_history
+    description: "Silver: cleaned business unit merger history"
+    columns:
+      - name: merger_id
+        tests: [unique, not_null]
+      - name: bu_id
+        tests: [not_null]
+
+  - name: stg_payroll
+    description: "Silver: cleaned payroll transactions"
+    columns:
+      - name: payroll_id
+        tests: [unique, not_null]
+      - name: person_id
+        tests: [not_null]
+      - name: pay_date
+        tests: [not_null]
+      - name: net_salary
+        tests: [not_null]

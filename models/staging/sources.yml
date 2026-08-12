@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: silver_src
+  - name: hrdt_raw
     database: HRDT_DEV_DB
     schema: HRDT_DEV_RAW_SC
     description: "HRMS raw layer - daily CSV files from Workday via S3"
